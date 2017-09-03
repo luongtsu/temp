@@ -76,7 +76,13 @@ class Schedule {
         switch typeIndex {
         case 0:
             type = .weekDay
-            weekDays = items
+            if Calendar.current.firstWeekday == 2 {
+                weekDays = items.map({ (index) -> Int in
+                    return (index + 1) % 7
+                })
+            } else {
+                weekDays = items
+            }
         case 1:
             type = .week
             timesPerWeek = items.first ?? 1

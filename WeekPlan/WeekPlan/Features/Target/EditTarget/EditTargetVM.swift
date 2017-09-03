@@ -86,7 +86,12 @@ class EditTargetVM: BaseViewControllerPresentable {
             weekStackLayout.defaultItemWidth = 60
         }
         
-        let weekDayCellVM_1 = Style7TableCellVM(items: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], font: Font.title, textColor: Color.themeColor.value(), bgColorNormal: Color.selectionItemBackgroundNormal.value(), bgColorSelected: Color.selectionItemBackgroundSelected.value(), isMultipleChoice: true, selectedIndex: [0], stackLayout: weekStackLayout, separatorStyle: .noLine)
+        var daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        if Calendar.current.firstWeekday == 2 {
+            daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        }
+        
+        let weekDayCellVM_1 = Style7TableCellVM(items: daysOfWeek, font: Font.title, textColor: Color.themeColor.value(), bgColorNormal: Color.selectionItemBackgroundNormal.value(), bgColorSelected: Color.selectionItemBackgroundSelected.value(), isMultipleChoice: true, selectedIndex: [0], stackLayout: weekStackLayout, separatorStyle: .noLine)
         
         let weekDayCellVM_2 = Style7TableCellVM(items: ["1", "2", "3", "4", "5", "6", "7"], font: Font.title, textColor: Color.themeColor.value(), bgColorNormal: Color.selectionItemBackgroundNormal.value(), bgColorSelected: Color.selectionItemBackgroundSelected.value(), isMultipleChoice: false, selectedIndex: [0], stackLayout: weekStackLayout, separatorStyle: .noLine)
         
@@ -105,11 +110,22 @@ class EditTargetVM: BaseViewControllerPresentable {
             iconCellVM.tintColor = target.tintColor.value()
             
             scheduleTypeCellVM.selectedIndex = [target.schedule.indexes().type]
-            
+            let items = target.schedule.indexes().items
             switch scheduleTypeCellVM.selectedIndex[0] {
-            case 0: weekDayCellVM_1.selectedIndex = target.schedule.indexes().items
-            case 1: weekDayCellVM_2.selectedIndex = target.schedule.indexes().items
-            default: weekDayCellVM_3.selectedIndex = target.schedule.indexes().items
+            case 0:
+                if Calendar.current.firstWeekday == 2 {
+                    weekDayCellVM_1.selectedIndex = items.map({ (index) -> Int in
+                        if index > 0 {
+                            return index - 1
+                        } else {
+                            return 6
+                        }
+                    })
+                } else {
+                    weekDayCellVM_1.selectedIndex = items
+                }
+            case 1: weekDayCellVM_2.selectedIndex = items
+            default: weekDayCellVM_3.selectedIndex = items
             }
             
             noteCellVM.textViewContent = target.note
