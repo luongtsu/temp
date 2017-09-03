@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomMenuView" customModule="WeekPlan" customModuleProvider="target">
+            <connections>
+                <outlet property="button1" destination="G9a-az-c2w" id="Eaa-OZ-Bs2"/>
+                <outlet property="button1extra" destination="mzv-ky-6jb" id="PRA-0i-8gE"/>
+                <outlet property="button2" destination="fC4-NA-vTi" id="aMC-Kn-CJl"/>
+                <outlet property="button3" destination="vwk-PX-9e1" id="MUS-bb-ZOi"/>
+                <outlet property="button4" destination="lwY-xM-s2O" id="Hqe-KA-t3D"/>
+                <outlet property="button5" destination="XAI-Kd-4Y0" id="bNr-ch-Y2T"/>
+                <outlet property="label1" destination="pHj-Ut-2Ft" id="og0-ZU-UnA"/>
+                <outlet property="label1extra" destination="6Pa-aW-KWh" id="gv4-WQ-2he"/>
+                <outlet property="label2" destination="LtB-Ra-r0m" id="kEc-o5-ALq"/>
+                <outlet property="label3" destination="bae-II-h8C" id="Zps-a8-muF"/>
+                <outlet property="label4" destination="ItH-wp-tfJ" id="pfB-Dr-aXl"/>
+                <outlet property="label5" destination="Zi2-uC-eRy" id="8RA-M3-F9u"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CustomMenuView" id="iN0-l3-epB" userLabel="BaseView">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="109"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wf2-IK-S0B" userLabel="DeviderView">
+                    <rect key="frame" x="16" y="8" width="405" height="1"/>
+                    <color key="backgroundColor" red="0.832011421319797" green="0.832011421319797" blue="0.832011421319797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="na3-H2-Gfi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLI-Ar-KRs" userLabel="LabelBaseView">
+                    <rect key="frame" x="0.0" y="68" width="437" height="18"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHj-Ut-2Ft" userLabel="Label1">
+                            <rect key="frame" x="33.5" y="0.0" width="80" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="Clc-H9-cAu"/>
+                                <constraint firstAttribute="width" constant="80" id="ROL-Iw-0sL"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="RUb-D7-oVl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-aW-KWh" userLabel="Label1a">
+                            <rect key="frame" x="91.5" y="-1.5" width="80" height="20.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20.5" id="Jmd-fY-ebl"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="OXg-gr-jEt"/>
+                                <constraint firstAttribute="width" constant="80" id="lid-Po-omz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtB-Ra-r0m" userLabel="Label2">
+                            <rect key="frame" x="149.5" y="0.5" width="80" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bae-II-h8C" userLabel="Label3">
+                            <rect key="frame" x="207.5" y="0.5" width="80" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItH-wp-tfJ" userLabel="Label4">
+                            <rect key="frame" x="265.5" y="0.5" width="80" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi2-uC-eRy" userLabel="Label5">
+                            <rect key="frame" x="323.5" y="0.5" width="80" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="bae-II-h8C" firstAttribute="centerY" secondItem="pHj-Ut-2Ft" secondAttribute="centerY" id="3aH-70-cjM"/>
+                        <constraint firstItem="LtB-Ra-r0m" firstAttribute="height" secondItem="pHj-Ut-2Ft" secondAttribute="height" id="79e-Et-4vQ"/>
+                        <constraint firstItem="6Pa-aW-KWh" firstAttribute="centerY" secondItem="pHj-Ut-2Ft" secondAttribute="centerY" id="7XA-oi-FrQ"/>
+                        <constraint firstItem="LtB-Ra-r0m" firstAttribute="centerY" secondItem="pHj-Ut-2Ft" secondAttribute="centerY" id="Azb-T8-dVv"/>
+                        <constraint firstItem="ItH-wp-tfJ" firstAttribute="centerY" secondItem="pHj-Ut-2Ft" secondAttribute="centerY" id="BdV-f5-DZQ"/>
+                        <constraint firstAttribute="height" constant="18" id="FKM-SQ-k3i"/>
+                        <constraint firstAttribute="bottom" secondItem="pHj-Ut-2Ft" secondAttribute="bottom" id="GIT-HH-l4P"/>
+                        <constraint firstItem="LtB-Ra-r0m" firstAttribute="width" secondItem="pHj-Ut-2Ft" secondAttribute="width" id="Gii-5Z-XWm"/>
+                        <constraint firstItem="Zi2-uC-eRy" firstAttribute="width" secondItem="pHj-Ut-2Ft" secondAttribute="width" id="Tqo-Dk-HGN"/>
+                        <constraint firstItem="bae-II-h8C" firstAttribute="height" secondItem="pHj-Ut-2Ft" secondAttribute="height" id="VQ5-bE-7Pm"/>
+                        <constraint firstItem="ItH-wp-tfJ" firstAttribute="height" secondItem="pHj-Ut-2Ft" secondAttribute="height" id="gD9-Gr-ajk"/>
+                        <constraint firstItem="Zi2-uC-eRy" firstAttribute="centerY" secondItem="pHj-Ut-2Ft" secondAttribute="centerY" id="haX-vo-0zj"/>
+                        <constraint firstItem="pHj-Ut-2Ft" firstAttribute="top" secondItem="JLI-Ar-KRs" secondAttribute="top" id="lQc-JY-GCj"/>
+                        <constraint firstItem="ItH-wp-tfJ" firstAttribute="width" secondItem="pHj-Ut-2Ft" secondAttribute="width" id="soh-nc-fFJ"/>
+                        <constraint firstItem="bae-II-h8C" firstAttribute="width" secondItem="pHj-Ut-2Ft" secondAttribute="width" id="t6P-Ux-bRL"/>
+                        <constraint firstItem="Zi2-uC-eRy" firstAttribute="height" secondItem="pHj-Ut-2Ft" secondAttribute="height" id="zyT-rD-2GK"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Oig-gI-ENF">
+                    <rect key="frame" x="55.5" y="32" width="326" height="54"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9a-az-c2w" userLabel="Button1" customClass="WCLShineButton" customModule="WCLShineButton">
+                            <rect key="frame" x="0.0" y="0.0" width="36" height="54"/>
+                            <color key="backgroundColor" red="0.88872144670050757" green="0.88872144670050757" blue="0.88872144670050757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="Wk5-0u-HKC"/>
+                                <constraint firstAttribute="height" constant="54" id="jnv-hq-R3q"/>
+                            </constraints>
+                            <connections>
+                                <action selector="button1Pressed:" destination="-1" eventType="touchUpInside" id="1ZJ-el-tfY"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzv-ky-6jb" userLabel="Button1a" customClass="WCLShineButton" customModule="WCLShineButton">
+                            <rect key="frame" x="58" y="0.0" width="36" height="54"/>
+                            <color key="backgroundColor" red="0.88872144669999997" green="0.88872144669999997" blue="0.88872144669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="S2y-dJ-M6Y"/>
+                                <constraint firstAttribute="height" constant="54" id="oH0-fs-xp9"/>
+                            </constraints>
+                            <connections>
+                                <action selector="button1Pressed:" destination="-1" eventType="touchUpInside" id="L3W-6T-2K7"/>
+                                <action selector="button1extraPressed:" destination="-1" eventType="valueChanged" id="NAr-Rw-fk6"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fC4-NA-vTi" userLabel="Button2" customClass="WCLShineButton" customModule="WCLShineButton">
+                            <rect key="frame" x="116" y="0.0" width="36" height="54"/>
+                            <color key="backgroundColor" red="0.88872144670050757" green="0.88872144670050757" blue="0.88872144670050757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="WGF-6V-mze"/>
+                                <constraint firstAttribute="height" constant="54" id="gOU-hJ-9DD"/>
+                            </constraints>
+                            <connections>
+                                <action selector="button2Pressed:" destination="-1" eventType="touchUpInside" id="hlx-Lq-6RT"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwk-PX-9e1" userLabel="Button3" customClass="WCLShineButton" customModule="WCLShineButton">
+                            <rect key="frame" x="174" y="0.0" width="36" height="54"/>
+                            <color key="backgroundColor" red="0.88872144670050757" green="0.88872144670050757" blue="0.88872144670050757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="3j4-Qo-ieU"/>
+                                <constraint firstAttribute="width" constant="36" id="wEX-eV-329"/>
+                            </constraints>
+                            <connections>
+                                <action selector="button3Pressed:" destination="-1" eventType="touchUpInside" id="axP-Xc-c6m"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwY-xM-s2O" userLabel="Button4" customClass="WCLShineButton" customModule="WCLShineButton">
+                            <rect key="frame" x="232" y="0.0" width="36" height="54"/>
+                            <color key="backgroundColor" red="0.88872144670050757" green="0.88872144670050757" blue="0.88872144670050757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="Io0-a4-DJH"/>
+                                <constraint firstAttribute="width" constant="36" id="TMn-KT-I5q"/>
+                            </constraints>
+                            <connections>
+                                <action selector="button4Pressed:" destination="-1" eventType="touchUpInside" id="xRz-O5-RD8"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAI-Kd-4Y0" userLabel="Button5" customClass="WCLShineButton" customModule="WCLShineButton">
+                            <rect key="frame" x="290" y="0.0" width="36" height="54"/>
+                            <color key="backgroundColor" red="0.88872144670050757" green="0.88872144670050757" blue="0.88872144670050757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="Aby-8O-9R6"/>
+                                <constraint firstAttribute="width" constant="36" id="PfQ-GN-AeB"/>
+                            </constraints>
+                            <connections>
+                                <action selector="button5Pressed:" destination="-1" eventType="touchUpInside" id="rbH-tw-TWd"/>
+                                <action selector="buttonDidPressed:" destination="-1" eventType="touchDragInside" id="MbR-mk-KTQ"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bae-II-h8C" firstAttribute="centerX" secondItem="vwk-PX-9e1" secondAttribute="centerX" id="15N-Kr-9vB"/>
+                <constraint firstItem="Oig-gI-ENF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3BC-ar-Sbh"/>
+                <constraint firstAttribute="trailing" secondItem="JLI-Ar-KRs" secondAttribute="trailing" id="3Hf-F9-WQP"/>
+                <constraint firstItem="6Pa-aW-KWh" firstAttribute="centerX" secondItem="mzv-ky-6jb" secondAttribute="centerX" id="3Jb-cl-EhG"/>
+                <constraint firstItem="JLI-Ar-KRs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="48x-RE-KzK"/>
+                <constraint firstAttribute="trailing" secondItem="Wf2-IK-S0B" secondAttribute="trailing" constant="16" id="4AP-fj-86L"/>
+                <constraint firstItem="lwY-xM-s2O" firstAttribute="centerX" secondItem="ItH-wp-tfJ" secondAttribute="centerX" id="GSl-ew-RI4"/>
+                <constraint firstItem="JLI-Ar-KRs" firstAttribute="top" secondItem="Oig-gI-ENF" secondAttribute="bottom" constant="-18" id="MU7-FC-6Bt"/>
+                <constraint firstItem="pHj-Ut-2Ft" firstAttribute="centerX" secondItem="G9a-az-c2w" secondAttribute="centerX" id="NQf-uV-x2c"/>
+                <constraint firstItem="Wf2-IK-S0B" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="OP9-Fl-fTT"/>
+                <constraint firstItem="Oig-gI-ENF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="5" id="d2T-y1-38c"/>
+                <constraint firstItem="Wf2-IK-S0B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="fN4-14-LdQ"/>
+                <constraint firstItem="XAI-Kd-4Y0" firstAttribute="centerX" secondItem="Zi2-uC-eRy" secondAttribute="centerX" id="u2K-Aa-bFl"/>
+                <constraint firstItem="LtB-Ra-r0m" firstAttribute="centerX" secondItem="fC4-NA-vTi" secondAttribute="centerX" id="xkl-8o-9pz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="63.5" y="-201.5"/>
+        </view>
+    </objects>
+</document>

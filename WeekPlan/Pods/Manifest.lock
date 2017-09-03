@@ -1,0 +1,27 @@
+PODS:
+  - CircleProgressView (1.1.2)
+  - GTProgressBar (0.1.3)
+  - IQKeyboardManagerSwift (4.0.9)
+  - ReachabilitySwift (3)
+  - TFLog (0.3)
+  - WCLShineButton (1.0.5)
+
+DEPENDENCIES:
+  - CircleProgressView (~> 1.0)
+  - GTProgressBar
+  - IQKeyboardManagerSwift (= 4.0.9)
+  - ReachabilitySwift (= 3)
+  - TFLog (= 0.3)
+  - WCLShineButton
+
+SPEC CHECKSUMS:
+  CircleProgressView: 1e25a96d95bfabaaf91fad52ed801d12af057170
+  GTProgressBar: d130b36db4d0af881795aa4e5648e6dccd85b8fa
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  TFLog: 0415e6f980ac42895bf1de6d4100d3d28c613c60
+  WCLShineButton: 44371dea1bd1bb5b81cec5958d6280170c178059
+
+PODFILE CHECKSUM: e8d59c36770caf49355bd954bdf0ce5190641b40
+
+COCOAPODS: 1.2.1

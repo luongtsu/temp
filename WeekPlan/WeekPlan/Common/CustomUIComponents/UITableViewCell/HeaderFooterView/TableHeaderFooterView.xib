@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TableHeaderFooterView" customModule="WeekPlan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="519" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yme-wv-qUC">
+                    <rect key="frame" x="214.5" y="23" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="yme-wv-qUC" secondAttribute="height" multiplier="1:1" id="MkY-9R-exX"/>
+                        <constraint firstAttribute="width" constant="20" id="yOu-Zl-3uB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hF-Pg-AKN">
+                    <rect key="frame" x="238.5" y="23" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q19-Sz-gln" userLabel="LeftSeparatorView">
+                    <rect key="frame" x="8" y="32.5" width="198.5" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="JXL-xO-G4m"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bql-qB-n3w" userLabel="RightSeparatorView">
+                    <rect key="frame" x="288.5" y="32.5" width="222.5" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="THO-r8-ZYa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bql-qB-n3w" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9zz-ww-ASD"/>
+                <constraint firstItem="7hF-Pg-AKN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JXw-EC-yGk"/>
+                <constraint firstItem="yme-wv-qUC" firstAttribute="leading" secondItem="Q19-Sz-gln" secondAttribute="trailing" constant="8" id="UHU-0c-mfg"/>
+                <constraint firstAttribute="trailing" secondItem="bql-qB-n3w" secondAttribute="trailing" constant="8" id="XN2-qF-Wbu"/>
+                <constraint firstItem="7hF-Pg-AKN" firstAttribute="leading" secondItem="yme-wv-qUC" secondAttribute="trailing" constant="4" id="XNJ-aM-gU2"/>
+                <constraint firstItem="yme-wv-qUC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aCm-Ki-fDa"/>
+                <constraint firstItem="7hF-Pg-AKN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dgR-sL-8Sl"/>
+                <constraint firstItem="Q19-Sz-gln" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kOa-Lg-xWE"/>
+                <constraint firstItem="Q19-Sz-gln" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="rSI-xW-P9B"/>
+                <constraint firstItem="bql-qB-n3w" firstAttribute="leading" secondItem="7hF-Pg-AKN" secondAttribute="trailing" constant="8" id="we9-wu-9QC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="yme-wv-qUC" id="hAE-ik-bbm"/>
+                <outlet property="imageViewWidth" destination="yOu-Zl-3uB" id="XVp-ER-xCf"/>
+                <outlet property="leadingLabelToImageView" destination="XNJ-aM-gU2" id="8qm-v2-EH4"/>
+                <outlet property="leftSaparatorLine" destination="Q19-Sz-gln" id="LZR-GY-BiZ"/>
+                <outlet property="rightSaparatorLine" destination="bql-qB-n3w" id="I3p-0W-a0L"/>
+                <outlet property="titleLabel" destination="7hF-Pg-AKN" id="Ffr-B9-8PO"/>
+            </connections>
+            <point key="canvasLocation" x="-21.5" y="-268"/>
+        </view>
+    </objects>
+</document>

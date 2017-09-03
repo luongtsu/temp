@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+target 'WeekPlan' do
+
+    pod 'TFLog', '0.3'
+    pod 'IQKeyboardManagerSwift', '4.0.9'
+    pod 'ReachabilitySwift', '3'
+    pod 'WCLShineButton'
+    pod 'GTProgressBar'
+    pod 'CircleProgressView', '~> 1.0'
+end

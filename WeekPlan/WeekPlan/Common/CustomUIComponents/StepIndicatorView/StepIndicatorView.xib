@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepIndicatorView" customModule="WeekPlan" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView1" destination="JLF-VF-kf2" id="rsV-jQ-Bbp"/>
+                <outlet property="imageView2" destination="eXi-Vf-EER" id="4YB-EO-74Z"/>
+                <outlet property="imageView3" destination="9os-2Z-OHG" id="tDA-gk-6Lx"/>
+                <outlet property="imageView4" destination="LD2-cd-zzx" id="Ffx-wa-aQM"/>
+                <outlet property="imageView5" destination="DGa-ct-lUg" id="AXk-P4-BFn"/>
+                <outlet property="imageView6" destination="DRd-g2-exF" id="jC1-ff-GMB"/>
+                <outlet property="imageView7" destination="UIU-I8-p5D" id="M2U-kn-ahU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="37"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tOa-zh-agG">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="37"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-VF-kf2" userLabel="Image View 1">
+                            <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="JLF-VF-kf2" secondAttribute="height" multiplier="1:1" id="aaa-z9-zAk"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="eXi-Vf-EER" userLabel="Image View 2">
+                            <rect key="frame" x="55" y="0.0" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="eXi-Vf-EER" secondAttribute="height" multiplier="1:1" id="fOT-1T-6tq"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="9os-2Z-OHG" userLabel="Image View 3">
+                            <rect key="frame" x="109.5" y="0.0" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="9os-2Z-OHG" secondAttribute="height" multiplier="1:1" id="eqG-UY-69T"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="LD2-cd-zzx" userLabel="Image View 4">
+                            <rect key="frame" x="164.5" y="0.0" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="LD2-cd-zzx" secondAttribute="height" multiplier="1:1" id="49W-bS-blT"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="DGa-ct-lUg" userLabel="Image View 5">
+                            <rect key="frame" x="219.5" y="0.0" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="DGa-ct-lUg" secondAttribute="height" multiplier="1:1" id="imu-AG-Wle"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="DRd-g2-exF" userLabel="Image View 6">
+                            <rect key="frame" x="274" y="0.0" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="DRd-g2-exF" secondAttribute="height" multiplier="1:1" id="SXq-nn-Z8F"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="UIU-I8-p5D" userLabel="Image View 7">
+                            <rect key="frame" x="329" y="0.0" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="UIU-I8-p5D" secondAttribute="height" multiplier="1:1" id="liE-Md-nCS"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tOa-zh-agG" secondAttribute="trailing" id="XUc-8X-Zi8"/>
+                <constraint firstAttribute="bottom" secondItem="tOa-zh-agG" secondAttribute="bottom" id="gyb-8a-FbN"/>
+                <constraint firstItem="tOa-zh-agG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="keD-ha-vy5"/>
+                <constraint firstItem="tOa-zh-agG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="z9m-XU-rOz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34" y="210.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_bubble" width="48" height="48"/>
+    </resources>
+</document>
