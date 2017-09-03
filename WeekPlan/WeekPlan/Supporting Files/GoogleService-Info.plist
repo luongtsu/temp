@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>794181050236-80fqi24g2cod33b9ltu3aj5ekr1cph34.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.794181050236-80fqi24g2cod33b9ltu3aj5ekr1cph34</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDL7U7rvAQXjBCO-H6w06vXCsn112M2BZs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>794181050236</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.redstar.WeekPlan</string>
+	<key>PROJECT_ID</key>
+	<string>weekplan-7c66a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>weekplan-7c66a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:794181050236:ios:b50b5b196ef8e4a7</string>
+	<key>DATABASE_URL</key>
+	<string>https://weekplan-7c66a.firebaseio.com</string>
+</dict>
+</plist>

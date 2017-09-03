@@ -89,16 +89,18 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CircleProgressView/CircleProgressView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GTProgressBar/GTProgressBar.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReachabilitySwift/ReachabilitySwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TFLog/TFLog.framework"
   install_framework "$BUILT_PRODUCTS_DIR/WCLShineButton/WCLShineButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CircleProgressView/CircleProgressView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GTProgressBar/GTProgressBar.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReachabilitySwift/ReachabilitySwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TFLog/TFLog.framework"

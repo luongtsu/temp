@@ -86,6 +86,7 @@
 		967DC0D31F4935CA0001067E /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DC0D21F4935CA0001067E /* TextStyle.swift */; };
 		967DC0D71F4939510001067E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DC0D51F4939510001067E /* Category.swift */; };
 		967DC0D81F4939510001067E /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DC0D61F4939510001067E /* Target.swift */; };
+		969027901F5C57CD0009A3C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9690278F1F5C57CD0009A3C2 /* GoogleService-Info.plist */; };
 		96A0CFE51F1BEC0A002DD97F /* UINibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0CFE41F1BEC0A002DD97F /* UINibView.swift */; };
 		96A0CFE71F1BEC6F002DD97F /* UINibButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0CFE61F1BEC6F002DD97F /* UINibButton.swift */; };
 		96C6F5301F55D38E00846B0B /* Date+StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C6F52F1F55D38E00846B0B /* Date+StringFormat.swift */; };
@@ -174,6 +175,7 @@
 		967DC0D21F4935CA0001067E /* TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		967DC0D51F4939510001067E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		967DC0D61F4939510001067E /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		9690278F1F5C57CD0009A3C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		96A0CFE41F1BEC0A002DD97F /* UINibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINibView.swift; path = CustomUIComponents/UINibView.swift; sourceTree = "<group>"; };
 		96A0CFE61F1BEC6F002DD97F /* UINibButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINibButton.swift; path = CustomUIComponents/UINibButton.swift; sourceTree = "<group>"; };
 		96C6F52F1F55D38E00846B0B /* Date+StringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+StringFormat.swift"; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		96134E841F152B4800BDC9B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9690278F1F5C57CD0009A3C2 /* GoogleService-Info.plist */,
 				96134E851F152B4800BDC9B0 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -769,6 +772,7 @@
 				966968C41F19357C00039A87 /* TableHeaderFooterView.xib in Resources */,
 				967DC0B61F48A5490001067E /* Main.storyboard in Resources */,
 				96134E891F152B4800BDC9B0 /* LaunchScreen.storyboard in Resources */,
+				969027901F5C57CD0009A3C2 /* GoogleService-Info.plist in Resources */,
 				9614F2C51F35C11000AA5B11 /* Style4TableCell.xib in Resources */,
 				966968CB1F1939B700039A87 /* Style1TableCell.xib in Resources */,
 				967DC0901F4886510001067E /* StepIndicatorView.xib in Resources */,
@@ -1016,7 +1020,7 @@
 				DEVELOPMENT_TEAM = 6KYDAR364C;
 				INFOPLIST_FILE = "$(SRCROOT)/WeekPlan/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vika.WeekPlan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redstar.WeekPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1030,7 +1034,7 @@
 				DEVELOPMENT_TEAM = 6KYDAR364C;
 				INFOPLIST_FILE = "$(SRCROOT)/WeekPlan/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vika.WeekPlan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redstar.WeekPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

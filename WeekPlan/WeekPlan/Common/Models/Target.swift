@@ -36,16 +36,27 @@ class Target {
     }
     
     func toAnyObject() -> Any {
-        return [
+        var dict = [
             "name": name,
             "iconName": iconName,
-            "note": note,
-            "tintColor": tintColor,
+            "tintColor": tintColor.rawValue,
             "dateStarted": dateStarted.toString(),
             "bestStreak": bestStreak,
             "schedule": schedule.toAnyObject(),
-            "records": records
+            "records": recordToObject()
         ]
+        if !note.isEmpty {
+            dict["note"] = note
+        }
+        return dict
+    }
+    
+    func recordToObject() -> Any {
+        var dictResult: [String:Int] = [:]
+        for (key, value) in records {
+            dictResult[key] = value.rawValue
+        }
+        return dictResult
     }
 }
 

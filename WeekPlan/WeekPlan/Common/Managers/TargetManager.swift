@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class TargetManager {
     
@@ -24,7 +25,11 @@ class TargetManager {
     var todayTargetSkip: [Target] = []
     var otherTargetAll: [Target] = []
     
+    var rootRef: DatabaseReference
+    var targetRef: DatabaseReference
     init() {
+        rootRef = Database.database().reference(withPath: "week-plan")
+        targetRef = rootRef.child("target")
         loadTargets()
     }
     
@@ -73,11 +78,20 @@ extension TargetManager {
     
     func didEditTarget(target: Target) {
         //saveCurrentData()
+        
+        // Update to FireBase
+        targetRef.updateChildValues(["\(target.key)" : target.toAnyObject()])
+        
         updateTargetLists()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: TargetManager.notifyListOfTargetIsChanged), object: target, userInfo: nil)
     }
 
     func addNewTarget(target: Target) {
+        
+        // Add to FireBase
+        let createdTargetRef = targetRef.child(target.key)
+        createdTargetRef.setValue(target.toAnyObject())
+        
         allTargets.append(target)
         //saveCurrentData()
         updateTargetLists()
@@ -88,6 +102,11 @@ extension TargetManager {
         allTargets = allTargets.filter({ (item) -> Bool in
             return item.key != target.key
         })
+        
+        // Remove from FireBase
+        let createdTargetRef = targetRef.child(target.key)
+        createdTargetRef.removeValue()
+        
         //saveCurrentData()
         updateTargetLists()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: TargetManager.notifyListOfTargetIsChanged), object: target, userInfo: nil)
@@ -102,6 +121,11 @@ extension TargetManager {
         case .undo: target.records.removeValue(forKey: recordKey)
         default: break
         }
+        
+        // Update to FireBase
+        let targetR = targetRef.child(target.key)
+        targetR.updateChildValues(["record" : target.recordToObject()])
+        
         updateTargetLists()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: TargetManager.notifyListOfTargetIsChanged), object: target, userInfo: nil)
     }

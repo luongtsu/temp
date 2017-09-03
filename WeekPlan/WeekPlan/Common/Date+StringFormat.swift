@@ -15,7 +15,7 @@ extension Date {
     static func dateFormatter() -> DateFormatter {
         guard defaultDateFormatter != nil else {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "Y/M/d"
+            dateFormatter.dateFormat = "Y-M-d"
             defaultDateFormatter = dateFormatter
             return defaultDateFormatter!
         }

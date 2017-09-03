@@ -8,7 +8,6 @@
 
 import UIKit
 import GTProgressBar
-import CircleProgressView
 
 typealias SelectMenuCompletion = (_ selectedOption: ButtonMenuType) -> Void
 

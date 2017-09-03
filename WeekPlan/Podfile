@@ -10,5 +10,8 @@ target 'WeekPlan' do
     pod 'ReachabilitySwift', '3'
     pod 'WCLShineButton'
     pod 'GTProgressBar'
-    pod 'CircleProgressView', '~> 1.0'
+    
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
 end

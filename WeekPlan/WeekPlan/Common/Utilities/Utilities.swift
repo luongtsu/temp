@@ -14,7 +14,7 @@ import ReachabilitySwift
 struct Util {
     
     static func generatedId() -> String {
-        return "\(UUID().uuidString)-\(Date().timeIntervalSince1970)"
+        return "\(UUID().uuidString)-\(Date().timeIntervalSince1970)".replacingOccurrences(of: ".", with: "")
     }
     
     static func isPhone() -> Bool {
