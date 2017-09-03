@@ -1,6 +1,0 @@
-framework module TFLog {
-  umbrella header "TFLog-umbrella.h"
-
-  export *
-  module * { export * }
-}
