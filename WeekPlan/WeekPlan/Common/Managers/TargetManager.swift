@@ -27,31 +27,13 @@ class TargetManager {
     
     var rootRef: DatabaseReference
     var targetRef: DatabaseReference
+    
+    private var observerKey: UInt = 0
+    
     init() {
         rootRef = Database.database().reference(withPath: "week-plan")
         targetRef = rootRef.child("target")
-        loadTargets()
-    }
-    
-    func loadTargets() {
-        // Load from UserDefault
-        allTargets = []
-        let loadedData = UserDefaults.standard.object(forKey: keyToSaveData) as? Data
-        if let `loadedData` = loadedData {
-            let items = NSKeyedUnarchiver.unarchiveObject(with: `loadedData`) as? [Target]
-            if let `items` = items {
-                allTargets.append(contentsOf: items)
-            }
-        }
-        
-        // Split into sub set
-        updateTargetLists()
-    }
-    
-    func saveCurrentData() {
-        // Save to UserDefault
-        let dataToSave = NSKeyedArchiver.archivedData(withRootObject: allTargets)
-        UserDefaults.standard.set(dataToSave, forKey: keyToSaveData)
+        observerKey = observerTargetChanges()
     }
 
     func updateTargetLists() {
@@ -61,7 +43,6 @@ class TargetManager {
         todayTargetSkip.removeAll()
         todayTargetCancel.removeAll()
         
-        // TODO: rewrite this
         for item in allTargets {
             switch item.todayRecordStatus() {
             case .open: todayTargetOpen.append(item)
@@ -72,13 +53,32 @@ class TargetManager {
             }
         }
     }
+    
+    private func observerTargetChanges() -> UInt {
+        let handler = targetRef.observe(.value, with: { [weak self] (snapShot) in
+            guard let `self` = self else { return }
+            var fetchedTargets: [Target] = []
+            for item in snapShot.children {
+                let target = Target(snapshot: item as! DataSnapshot)
+                fetchedTargets.append(target)
+            }
+            self.allTargets = fetchedTargets
+            self.didLoadData()
+        })
+        return handler
+    }
+    
+    private func didLoadData() {
+        targetRef.removeObserver(withHandle: observerKey)
+        updateTargetLists()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: TargetManager.notifyListOfTargetIsChanged), object: nil, userInfo: nil)
+    }
 }
 
 extension TargetManager {
     
     func didEditTarget(target: Target) {
-        //saveCurrentData()
-        
+
         // Update to FireBase
         targetRef.updateChildValues(["\(target.key)" : target.toAnyObject()])
         
@@ -93,21 +93,19 @@ extension TargetManager {
         createdTargetRef.setValue(target.toAnyObject())
         
         allTargets.append(target)
-        //saveCurrentData()
         updateTargetLists()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: TargetManager.notifyListOfTargetIsChanged), object: target, userInfo: nil)
     }
     
     func removeTarget(target: Target) {
-        allTargets = allTargets.filter({ (item) -> Bool in
-            return item.key != target.key
-        })
-        
+       
         // Remove from FireBase
         let createdTargetRef = targetRef.child(target.key)
         createdTargetRef.removeValue()
         
-        //saveCurrentData()
+        allTargets = allTargets.filter({ (item) -> Bool in
+            return item.key != target.key
+        })
         updateTargetLists()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: TargetManager.notifyListOfTargetIsChanged), object: target, userInfo: nil)
     }
@@ -124,13 +122,9 @@ extension TargetManager {
         
         // Update to FireBase
         let targetR = targetRef.child(target.key)
-        targetR.updateChildValues(["record" : target.recordToObject()])
+        targetR.updateChildValues(["records" : target.recordToObject()])
         
         updateTargetLists()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: TargetManager.notifyListOfTargetIsChanged), object: target, userInfo: nil)
-    }
-    
-    func noyifyAboutTargetChange(target: Target) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: TargetManager.notifyATargetIsChanged), object: target, userInfo: nil)
     }
 }

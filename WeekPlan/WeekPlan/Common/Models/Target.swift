@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Target {
     
@@ -27,12 +28,29 @@ class Target {
     var records: [String:RecordStatus] = [:]
     var bestStreak: Int = 0
     
-    init(name: String, iconName: String, note: String, tintColor: Color, schedule: Schedule = .defaultWeekDay()) {
+    init(key: String = Util.generatedId(), name: String, iconName: String, note: String, tintColor: Color, dateStarted: Date = Date(), schedule: Schedule = .defaultWeekDay(), bestStreak: Int = 0) {
+        self.key = key
         self.name = name
         self.iconName = iconName
         self.note = note
         self.tintColor = tintColor
+        self.dateStarted = dateStarted
         self.schedule = schedule
+        self.bestStreak = bestStreak
+    }
+    
+    init(snapshot: DataSnapshot) {
+        key = snapshot.key
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        
+        name = snapshotValue["name"] as? String ?? "Unknow"
+        iconName = snapshotValue["iconName"] as? String ?? TargetCategory.fitnessCenter.info().iconName
+        note = snapshotValue["note"] as? String ?? ""
+        tintColor = Color(rawValue: snapshotValue["tintColor"] as? Int ?? 0) ?? .categoryColor1
+        dateStarted =  (snapshotValue["dateStarted"] as? String ?? "").toDate() ?? Date()
+        bestStreak = snapshotValue["bestStreak"] as? Int ?? 0
+        schedule = Schedule(data: snapshotValue["schedule"] as? [String: Any] ?? [:])
+        records = Target.objectToRecords(object: snapshotValue["records"] as? [String: Int] ?? [:])
     }
     
     func toAnyObject() -> Any {
@@ -57,6 +75,14 @@ class Target {
             dictResult[key] = value.rawValue
         }
         return dictResult
+    }
+    
+    static func objectToRecords(object: [String: Int]) -> [String: RecordStatus] {
+        var fetchedRecords: [String: RecordStatus] = [:]
+        for (key, value) in object {
+            fetchedRecords[key] = RecordStatus(rawValue: value)
+        }
+        return fetchedRecords
     }
 }
 

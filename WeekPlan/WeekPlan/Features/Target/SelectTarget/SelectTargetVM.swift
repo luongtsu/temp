@@ -35,7 +35,7 @@ class SelectTargetVM: BaseViewControllerPresentable {
     }
     
     private func registerNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(targetIsChanged(notification:)), name:NSNotification.Name(rawValue: TargetManager.notifyATargetIsChanged), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(targetIsChanged(notification:)), name:NSNotification.Name(rawValue: TargetManager.notifyListOfTargetIsChanged), object: nil)
     }
     
     private func unregisterNotification() {

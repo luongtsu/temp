@@ -60,6 +60,13 @@ class Schedule {
         self.timesPerMonth = timesPerMonth
     }
     
+    init(data: [String:Any]) {
+        self.type = TypeOfSchedule(rawValue: data["type"] as? Int ?? 0) ?? .weekDay
+        self.weekDays = data["weekDays"] as? [Int] ?? []
+        self.timesPerWeek = data["timesPerWeek"] as? Int ?? 0
+        self.timesPerMonth = data["timesPerMonth"] as? Int ?? 0
+    }
+    
     class func defaultWeekDay() -> Schedule {
         return Schedule(type: .weekDay, weekDays: [1, 2, 3, 4, 5])
     }

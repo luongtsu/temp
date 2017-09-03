@@ -149,8 +149,6 @@ class EditTargetVM: BaseViewControllerPresentable {
             let scheduleSubItems = weekDayCellVMs[scheduleModeIndex].selectedIndex
             target.schedule.update(typeIndex: scheduleModeIndex, items: scheduleSubItems)
             observer?.didEditTarget(target: target)
-            
-            TargetManager.shared.noyifyAboutTargetChange(target: target)
         } else {
             let createdSchedule = Schedule.defaultWeekDay()
             let scheduleSubItems = weekDayCellVMs[scheduleModeIndex].selectedIndex
@@ -158,8 +156,6 @@ class EditTargetVM: BaseViewControllerPresentable {
             
             let createdTarget = Target(name: nameCellVM.textFieldContent ?? "Unknow", iconName: iconCellVM.iconName, note: noteCellVM.textViewContent ?? "", tintColor: Color.itemOfColor(givenColor: iconCellVM.tintColor) ?? Color.categoryColor1, schedule: createdSchedule)
             observer?.addNewTarget(target: createdTarget)
-            
-            TargetManager.shared.noyifyAboutTargetChange(target: createdTarget)
         }
         presenter?.backToPreviousScreen()
     }

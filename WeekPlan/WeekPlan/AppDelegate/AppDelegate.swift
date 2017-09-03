@@ -44,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        TargetManager.shared.saveCurrentData()
     }
 
     static func share() -> AppDelegate? {
