@@ -210,16 +210,20 @@ struct Util {
     typealias VoidCompletion = () -> Void
     static func showCustomAlert(title: String?, message: String, cancelTitle: String = "Cancel", confirmTitle: String = "OK", parent: UIViewController?, cancelHandler: VoidCompletion? = nil, completion: @escaping VoidCompletion) {
         let alert = UIAlertController(title: title ?? "", message: message, preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: cancelTitle, style: .cancel) { _ in
-            if let `cancelHandler` = cancelHandler {
-                cancelHandler()
+        if !cancelTitle.isEmpty {
+            let dismissAction = UIAlertAction(title: cancelTitle, style: .cancel) { _ in
+                if let `cancelHandler` = cancelHandler {
+                    cancelHandler()
+                }
             }
+            alert.addAction(dismissAction)
         }
+        
         let confirmAction = UIAlertAction(title: confirmTitle, style: .default) { _ in
             completion()
         }
-        alert.addAction(dismissAction)
         alert.addAction(confirmAction)
+        
         let parentVC = parent ?? AppDelegate.share()?.window!.rootViewController!
         DispatchQueue.main.async {
             parentVC?.present(alert, animated: true, completion: nil)

@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        
+        AccountManager.shared.signInAnonymousIfNeed()
         
         return true
     }

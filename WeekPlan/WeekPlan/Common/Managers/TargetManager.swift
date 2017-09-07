@@ -25,17 +25,16 @@ class TargetManager {
     var todayTargetSkip: [Target] = []
     var otherTargetAll: [Target] = []
     
-    var rootRef: DatabaseReference
-    var targetRef: DatabaseReference
+    var rootRef: DatabaseReference!
+    var userRef: DatabaseReference!
+    var targetRef: DatabaseReference!
     
     private var observerKey: UInt = 0
     
     init() {
-        rootRef = Database.database().reference(withPath: "week-plan")
-        targetRef = rootRef.child("target")
-        observerKey = observerTargetChanges()
     }
 
+    
     func updateTargetLists() {
         otherTargetAll.removeAll()
         todayTargetDone.removeAll()
@@ -52,6 +51,16 @@ class TargetManager {
             case .unknow: otherTargetAll.append(item)
             }
         }
+    }
+    
+    func startLoadingData() {
+        
+        rootRef = Database.database().reference(withPath: "week-plan")
+        userRef = rootRef.child(AccountManager.shared.user.uid)
+        targetRef = userRef.child("target")
+        
+        // Call observer once
+        observerKey = observerTargetChanges()
     }
     
     private func observerTargetChanges() -> UInt {

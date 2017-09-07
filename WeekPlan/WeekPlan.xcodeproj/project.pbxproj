@@ -87,6 +87,7 @@
 		967DC0D71F4939510001067E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DC0D51F4939510001067E /* Category.swift */; };
 		967DC0D81F4939510001067E /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DC0D61F4939510001067E /* Target.swift */; };
 		969027901F5C57CD0009A3C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9690278F1F5C57CD0009A3C2 /* GoogleService-Info.plist */; };
+		969985C11F5D0BEB00E0CF7E /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969985C01F5D0BEB00E0CF7E /* AccountManager.swift */; };
 		96A0CFE51F1BEC0A002DD97F /* UINibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0CFE41F1BEC0A002DD97F /* UINibView.swift */; };
 		96A0CFE71F1BEC6F002DD97F /* UINibButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0CFE61F1BEC6F002DD97F /* UINibButton.swift */; };
 		96C6F5301F55D38E00846B0B /* Date+StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C6F52F1F55D38E00846B0B /* Date+StringFormat.swift */; };
@@ -176,6 +177,7 @@
 		967DC0D51F4939510001067E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		967DC0D61F4939510001067E /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		9690278F1F5C57CD0009A3C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		969985C01F5D0BEB00E0CF7E /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		96A0CFE41F1BEC0A002DD97F /* UINibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINibView.swift; path = CustomUIComponents/UINibView.swift; sourceTree = "<group>"; };
 		96A0CFE61F1BEC6F002DD97F /* UINibButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINibButton.swift; path = CustomUIComponents/UINibButton.swift; sourceTree = "<group>"; };
 		96C6F52F1F55D38E00846B0B /* Date+StringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+StringFormat.swift"; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 		9666D12F1F3E0DE500E8BA11 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				969985C01F5D0BEB00E0CF7E /* AccountManager.swift */,
 				9666D1301F3E0DF700E8BA11 /* TargetManager.swift */,
 			);
 			path = Managers;
@@ -858,6 +861,7 @@
 				967DC0B91F48A5490001067E /* PomodoroVM.swift in Sources */,
 				967DC0C21F48A5490001067E /* SelectTargetVM.swift in Sources */,
 				966968CA1F1939B700039A87 /* Style1TableCell.swift in Sources */,
+				969985C11F5D0BEB00E0CF7E /* AccountManager.swift in Sources */,
 				967DC0BD1F48A5490001067E /* EditTargetVM.swift in Sources */,
 				967DC0C41F48A5490001067E /* TargetListVC.swift in Sources */,
 				967DC0CF1F48A5AA0001067E /* TrendMainVC.swift in Sources */,
